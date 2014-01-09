@@ -963,18 +963,18 @@ NSString * CoreTextLabelBlockKeyLinkPressed = @"CoreTextLabelBlockKeyLinkPressed
 
     CFRelease(attrFont);
 
-	do
-	{
-		if (newLinePlaceholder.location != NSNotFound)
-		{
-			NSAttributedString * newLine = [[NSAttributedString alloc] initWithString:@"\n" attributes:attributes];
+	// do
+	// {
+	// 	if (newLinePlaceholder.location != NSNotFound)
+	// 	{
+	// 		NSAttributedString * newLine = [[NSAttributedString alloc] initWithString:@"\n" attributes:attributes];
 
-			[attrString replaceCharactersInRange:newLinePlaceholder withAttributedString:newLine];
-		}
-		newLinePlaceholder = [attrString.string rangeOfString:newLinePlaceHolder];
+	// 		[attrString replaceCharactersInRange:newLinePlaceholder withAttributedString:newLine];
+	// 	}
+	// 	newLinePlaceholder = [attrString.string rangeOfString:newLinePlaceHolder];
 
-	}
-	while (newLinePlaceholder.location != NSNotFound);
+	// }
+	// while (newLinePlaceholder.location != NSNotFound);
     
     CFRelease(parentFont);
     
