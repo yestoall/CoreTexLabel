@@ -802,7 +802,7 @@ NSString * CoreTextLabelBlockKeyLinkPressed = @"CoreTextLabelBlockKeyLinkPressed
 	NSString * newLinePlaceHolder       = @"{BR}";
 	NSString * doubleNewLinePlaceHolder = [NSString stringWithFormat:@"%@%@", newLinePlaceHolder, newLinePlaceHolder];
 
-    html = [html stringByReplacingOccurrencesOfString:@"\n" withString:newLinePlaceHolder];
+    html = [html stringByReplacingOccurrencesOfString:@"\n" withString:@"\n"];
 	html = [html stringByReplacingOccurrencesOfRegex:@"</(p|div)>$" withString:@""];
     html = [html stringByReplacingOccurrencesOfRegex:@"(</(p|div)>)([\\s]*)(<(p|div)[^>]*>)" withString:doubleNewLinePlaceHolder];
 	html = [html stringByReplacingOccurrencesOfRegex:@"<(p|div)[^>]*>" withString:doubleNewLinePlaceHolder];
