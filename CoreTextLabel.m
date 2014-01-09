@@ -901,12 +901,12 @@ NSString * CoreTextLabelBlockKeyLinkPressed = @"CoreTextLabelBlockKeyLinkPressed
 					}
 				}
                 
-				if ([searchTag isEqualToString:@"h1"])
-				{
-                    CFRelease(matchFont);
-					matchFont  = CTFontCreateFromUIFont(self.h1Font);
-                    matchColor = self.h1TextColor.CGColor;                    
-				}
+				// if ([searchTag isEqualToString:@"h1"])
+				// {
+    //                 CFRelease(matchFont);
+				// 	matchFont  = CTFontCreateFromUIFont(self.h1Font);
+    //                 matchColor = self.h1TextColor.CGColor;                    
+				// }
 
                 [attributes setValue:(__bridge id)matchFont
                               forKey:(id)kCTFontAttributeName];
